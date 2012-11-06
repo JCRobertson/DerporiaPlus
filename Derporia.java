@@ -9,7 +9,7 @@ import javax.servlet.http.*;
 import java.io.*;
 
 
-public class Hello extends HttpServlet
+public class Derporia extends HttpServlet
 {
 
    public void doGet  (HttpServletRequest req, HttpServletResponse res)
