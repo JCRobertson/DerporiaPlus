@@ -30,6 +30,9 @@ public void doGet(HttpServletRequest req, HttpServletResponse res) throws Servle
     }
 
 public void doPost(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
+	//If this was a production system the input should be carefully checked. 
+	String claim = request.getParameter("claim").toString();
+	String assertions = request.getParameter("assertions").toString();
 	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
 
@@ -40,8 +43,8 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 	out.println("<meta charset=\"UTF-8\">");
 	out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"http://mason.gmu.edu/~jrobertq/derporia/derporiaStyle.css\">");
 	out.println("<title>Derporia: the never-ending land of claims</title>");
-	out.println(request.getParameter("claim"));
-	out.println(request.getParameter("assertions"));
+	out.println(claim);
+	out.println(assertions);
 	out.println("</body>");
 	out.println("</html>");
 
