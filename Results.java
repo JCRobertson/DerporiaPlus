@@ -38,6 +38,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 	out.println("<head>");
 	out.println("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
 	out.println("<meta charset=\"UTF-8\">");
+	out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"http://mason.gmu.edu/~jrobertq/derporia/derporiaStyle.css\">");
 	out.println("<title>Derporia: the never-ending land of claims</title>");
 	out.println(request.getParameter("claim"));
 	out.println(request.getParameter("assertions"));
