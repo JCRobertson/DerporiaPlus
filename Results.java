@@ -9,11 +9,9 @@ import javax.servlet.http.*;
 import java.io.*;
 
 
-public class Results extends HttpServlet
-{
+public class Results extends HttpServlet {
 
-public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
-   {
+public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
 	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
@@ -30,4 +28,22 @@ public void doGet(HttpServletRequest req, HttpServletResponse res) throws Servle
         out.close ();
 
     }
+
+public void doPost(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
+	res.setContentType ("text/html");
+	PrintWriter out = res.getWriter ();
+
+	out.println("<!DOCTYPE html>");
+	out.println("<html>");
+	out.println("<head>");
+	out.println("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
+	out.println("<meta charset=\"UTF-8\">");
+	out.println("<title>Derporia: the never-ending land of claims</title>");
+	out.println(request.getParameter("claim"));
+	out.println(request.getParameter("assertions"));
+	out.println("</body>");
+	out.println("</html>");
+
+        out.close ();
+}
 }
