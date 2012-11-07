@@ -15,13 +15,13 @@ public class Derporia extends HttpServlet
 public void doGet  (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
    {
 
-	res.setContentType (/"text/html/");
+	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
 
 	out.println("<!DOCTYPE html>");
 	out.println("<html>");
 	out.println("<head>");
-	out.println("<meta http-equiv=/"content-type/" content=/"text/html; charset=UTF-8/">");
+	/*out.println("<meta http-equiv=/"content-type/" content=/"text/html; charset=UTF-8/">");
 	out.println("<meta charset=/"UTF-8/">");
 	out.println("<title>Derporia: the never-ending land of claims</title>");
 	out.println("");
@@ -65,7 +65,7 @@ public void doGet  (HttpServletRequest req, HttpServletResponse res) throws Serv
 	out.println("	");
 	out.println("");
 	out.println("</body>");
-	out.println("</html>");
+	out.println("</html>");*/
 
         out.close ();
 
