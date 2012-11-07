@@ -12,8 +12,7 @@ import java.io.*;
 public class Derporia extends HttpServlet
 {
 
-   public void doGet  (HttpServletRequest req, HttpServletResponse res)
-          throws ServletException, IOException
+public void doGet  (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
    {
 
         res.setContentType ("text/html");
