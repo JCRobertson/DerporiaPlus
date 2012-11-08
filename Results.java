@@ -77,7 +77,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 	out.println("<button type=\"button\" name=\"disagree\">Disagree</button> ");
 	out.println("</td>");
 	out.println("<td align=\"center\">");
-	out.println("<button onclick=\"location.href='http://www.example.com'\" type=\"button\" name=\"unsure\">Unsure</button>");
+	out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+(unsure+1)+"&convinced="+convinced+"'\" type=\"button\" name=\"unsure\">Unsure</button>");
 	out.println("</td>");
 	out.println("<td align=\"right\">");
 	out.println("<button type=\"button\" name=\"convinced\">Convinced</button> ");
