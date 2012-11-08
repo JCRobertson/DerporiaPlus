@@ -51,7 +51,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 	out.println("<title>" + claim + "</title>");
 	out.println("</head>");
 	out.println("<body>");
-	out.println("<h1> <h1>Derporia: the never-ending land of <del>baseless</del> claims</h1> </h1>");
+	out.println("<h1>Derporia: the never-ending land of <del>baseless</del> claims</h1>");
 	out.println("<hr>");
 	out.println("<p>");
 	out.println("The claim: ");
