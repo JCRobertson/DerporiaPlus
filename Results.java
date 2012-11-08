@@ -11,12 +11,17 @@ import java.io.*;
 
 public class Results extends HttpServlet {
 
-public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 private String claim;
 private String assertions;
 private int disagree = 0;
 private int unsure = 0;
 private int convinced = 0;
+
+public void doGet(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
+	claim = request.getParameter("claim").toString();
+	assertions = request.getParameter("assertions").toString();
+
+
 
 	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
@@ -36,8 +41,8 @@ private int convinced = 0;
 
 public void doPost(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
 	//If this was a production system the input should be carefully checked. 
-	String claim = request.getParameter("claim").toString();
-	String assertions = request.getParameter("assertions").toString();
+	claim = request.getParameter("claim").toString();
+	assertions = request.getParameter("assertions").toString();
 
 	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
