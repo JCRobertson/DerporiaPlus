@@ -12,6 +12,11 @@ import java.io.*;
 public class Results extends HttpServlet {
 
 public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+private String claim;
+private String assertions;
+private int disagree = 0;
+private int unsure = 0;
+private int convinced = 0;
 
 	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
