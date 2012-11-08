@@ -18,9 +18,16 @@ private int unsure = 0;
 private int convinced = 0;
 
 public void doGet(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
-	claim = request.getParameter("claim").toString();
-	assertions = request.getParameter("assertions").toString();
+	claim = request.getParameter("claim")==null ? "" : request.getParameter("claim");
+	assertions = request.getParameter("assertions")==null ? "" : request.getParameter("assertions");
+	try{
+		disagree = Integer.parseInt(request.getParameter("disagree"));
+		unsure = Integer.parseInt(request.getParameter("unsure"));
+		convinced = Integer.parseInt(request.getParameter("convinced"));
 
+	}catch (Exception e) {
+	//if this were a real app I would catch errors here. 
+	}
 
 
 	res.setContentType ("text/html");
