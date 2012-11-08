@@ -33,6 +33,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 	//If this was a production system the input should be carefully checked. 
 	String claim = request.getParameter("claim").toString();
 	String assertions = request.getParameter("assertions").toString();
+
 	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
 
@@ -42,9 +43,40 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 	out.println("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
 	out.println("<meta charset=\"UTF-8\">");
 	out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"http://mason.gmu.edu/~jrobertq/derporia/derporiaStyle.css\">");
-	out.println("<title>Derporia: the never-ending land of claims</title>");
-	out.println(claim);
-	out.println(assertions);
+	out.println("<title>" + claim + "</title>");
+	out.println("</head>");
+	out.println("<body>");
+	out.println("<h1> <h1>Derporia: the never-ending land of <del>baseless</del> claims</h1> </h1>");
+	out.println("<hr>");
+	out.println("<p>");
+	out.println("The claim: ");
+	out.println("<br>");
+	out.println("<b><font color=\"#5F04B4\">"+ claim +"</font></b>");
+	out.println("<br><br>");
+	out.println("Evidence:");
+	out.println("<br>");
+	out.println("<b><font color=\"#5F04B4\">" + assertions + "</font></b>");
+	out.println("</p>");
+	out.println("<br>");
+	out.println("<table class=\"center\" border=\"1\">");
+	out.println("<tbody><tr>");
+	out.println("<td>");
+	out.println("<table width=\"100%\">");
+	out.println("<tbody><tr>");
+	out.println("<td align=\"left\">");
+	out.println("<button type=\"button\" name=\"disagree\">Disagree</button> ");
+	out.println("</td>");
+	out.println("<td align=\"center\">");
+	out.println("<button onclick=\"location.href='http://www.example.com'\" type=\"button\" name=\"unsure\">Unsure</button>");
+	out.println("</td>");
+	out.println("<td align=\"right\">");
+	out.println("<button type=\"button\" name=\"convinced\">Convinced</button> ");
+	out.println("</td>");
+	out.println("</tr>");
+	out.println("</tbody></table>");
+	out.println("</td>");
+	out.println("</tr>");
+	out.println("</tbody></table>");
 	out.println("</body>");
 	out.println("</html>");
 
