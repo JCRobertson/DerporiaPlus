@@ -1,0 +1,5 @@
+#!/bin/bash
+javac ~/java/jdressel/Derporia.java -verbose
+javac ~/java/jdressel/Results.java
+cp ~/java/jdressel/Derporia.class /data/apps-swe432/swe432/WEB-INF/classes/jdressel/Derporia.class
+cp ~/java/jdressel/Results.class /data/apps-swe432/swe432/WEB-INF/classes/jdressel/Results.class
