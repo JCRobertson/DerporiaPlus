@@ -1,4 +1,4 @@
-package jdressel;
+package jdressel.DerporiaPremium;
 // James Dressel and James Robertson
 // Based on the Hello.java example
 // Import Servlet Libraries
