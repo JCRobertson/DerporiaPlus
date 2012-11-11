@@ -17,6 +17,7 @@ private int disagree = 0;
 private int unsure = 0;
 private int convinced = 0;
 private boolean showCount = false;//by default don't show the vote count. 
+private final String styleSheet = "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://mason.gmu.edu/~jrobertq/derporia/derporiaStyle.css\">";
 
 public void doGet(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
 	showCount = true;
@@ -55,7 +56,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 		out.println("<head>");
 		out.println("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">");
 		out.println("<meta charset=\"UTF-8\">");
-		out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"http://mason.gmu.edu/~jrobertq/derporia/derporiaStyle.css\">");
+		out.println(styleSheet);
 		out.println("<title>" + claim + "</title>");
 		out.println("</head>");
 		out.println("<body>");
