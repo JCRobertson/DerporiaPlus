@@ -44,6 +44,8 @@ public void doGet(HttpServletRequest request, HttpServletResponse res) throws Se
 	out.println("<body>");
 	out.println("<h1>Derporia: the never-ending land of <del>baseless</del> claims</h1>");
 	out.println("<hr>");
+	out.println("	<br>");
+	out.println("	<h1>James Robertson and James Dressel</h1>");
 	out.println("<p>");
 	out.println("The claim: ");
 	out.println("<br>");
@@ -60,16 +62,16 @@ public void doGet(HttpServletRequest request, HttpServletResponse res) throws Se
 	out.println("<table width=\"100%\">");
 	out.println("<tbody><tr>");
 	out.println("<td align=\"left\">");
-out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+(disagree+1)+"&unsure="+unsure+"&convinced="+convinced+"'\" type=\"button\" name=\"disagree\">Disagree</button>");
+out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+(disagree+1)+"&unsure="+unsure+"&convinced="+convinced+"'\" type=\"button\" name=\"disagree\">Disagree</button>");
 	
 	out.println("</td>");
 	out.println("<td align=\"center\">");
-	out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+(unsure+1)+"&convinced="+convinced+"'\" type=\"button\" name=\"unsure\">Unsure</button>");
+	out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+(unsure+1)+"&convinced="+convinced+"'\" type=\"button\" name=\"unsure\">Unsure</button>");
 	out.println("<br>");
 	
 	out.println("</td>");
 	out.println("<td align=\"right\">");
-out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+unsure+"&convinced="+(convinced+1)+"'\" type=\"button\" name=\"convinced\">Convinced</button>");
+out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+unsure+"&convinced="+(convinced+1)+"'\" type=\"button\" name=\"convinced\">Convinced</button>");
 	
 	out.println("</td>");
 	out.println("</tr>");
@@ -88,7 +90,7 @@ out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:808
 	out.println("</tr>");
 	out.println("</tbody></table>");
 	out.println("<p>");
-	out.println("<a href=\"http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Derporia\">Submit a new claim</a>");
+	out.println("<a href=\"http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Derporia\">Submit a new claim</a>");
 	out.println("</p>");
 	out.println("</body>");
 	out.println("</html>");
@@ -116,6 +118,8 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 	out.println("<body>");
 	out.println("<h1>Derporia: the never-ending land of <del>baseless</del> claims</h1>");
 	out.println("<hr>");
+	out.println("	<br>");
+	out.println("	<h1>James Robertson and James Dressel</h1>");
 	out.println("<p>");
 	out.println("The claim: ");
 	out.println("<br>");
@@ -132,15 +136,15 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 	out.println("<table width=\"100%\">");
 	out.println("<tbody><tr>");
 	out.println("<td align=\"left\">");
-out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+(disagree+1)+"&unsure="+unsure+"&convinced="+convinced+"'\" type=\"button\" name=\"disagree\">Disagree</button>");
+out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+(disagree+1)+"&unsure="+unsure+"&convinced="+convinced+"'\" type=\"button\" name=\"disagree\">Disagree</button>");
 	out.println("</td>");
 	out.println("<td align=\"center\">");
-	out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+(unsure+1)+"&convinced="+convinced+"'\" type=\"button\" name=\"unsure\">Unsure</button>");
+	out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+(unsure+1)+"&convinced="+convinced+"'\" type=\"button\" name=\"unsure\">Unsure</button>");
 	out.println("<br>");
 	//out.println("Unsure: " + unsure");
 	out.println("</td>");
 	out.println("<td align=\"right\">");
-out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+unsure+"&convinced="+(convinced+1)+"'\" type=\"button\" name=\"convinced\">Convinced</button>");
+out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Results?claim=" + claim + "&assertions="+ assertions +"&disagree="+disagree+"&unsure="+unsure+"&convinced="+(convinced+1)+"'\" type=\"button\" name=\"convinced\">Convinced</button>");
 	out.println("</td>");
 	out.println("</tr>");
 	out.println("</tbody></table>");
@@ -148,7 +152,7 @@ out.println("<button onclick=\"location.href='http://apps-swe432.vse.gmu.edu:808
 	out.println("</tr>");
 	out.println("</tbody></table>");
 	out.println("<p>");
-	out.println("<a href=\"http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Derporia\">Submit a new claim</a>");
+	out.println("<a href=\"http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Derporia\">Submit a new claim</a>");
 	out.println("</p>");
 	out.println("</body>");
 	out.println("</html>");

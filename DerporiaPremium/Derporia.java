@@ -35,6 +35,9 @@ public void doGet  (HttpServletRequest req, HttpServletResponse res) throws Serv
 	out.println("	<h1>Derporia: the never-ending land of <del>baseless</del> claims</h1>");
 	out.println("	<hr>");
 	out.println("	<br>");
+	out.println("	<h1>James Robertson and James Dressel</h1>");
+	out.println("	<hr>");
+	out.println("	<br>");
 	out.println("	<p>");
 	out.println("		Please enter make a claim and then assertions to support your claim. ");
 	out.println("	</p>");
