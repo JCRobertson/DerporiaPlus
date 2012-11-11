@@ -21,17 +21,8 @@ private final String styleSheet = "<link rel=\"stylesheet\" type=\"text/css\" hr
 
 public void doGet(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
 	showCount = true;
-	claim = request.getParameter("claim")==null ? "" : request.getParameter("claim");
-	assertions = request.getParameter("assertions")==null ? "" : request.getParameter("assertions");
-	try{//if this were real I would be checking for things that are not numbers/negative numbers and other silly things
-		disagree = Integer.parseInt(request.getParameter("disagree"));
-		unsure = Integer.parseInt(request.getParameter("unsure"));
-		convinced = Integer.parseInt(request.getParameter("convinced"));
-
-	}catch (Exception e) {
-	//if this were a real app I would catch errors here. 
-	}
-
+	setCount(request);
+	setClaimAssertion(request);
 
 	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
@@ -41,9 +32,8 @@ public void doGet(HttpServletRequest request, HttpServletResponse res) throws Se
 
 public void doPost(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
 	showCount = false;
-	//If this was a production system the input should be carefully checked. 
-	claim = request.getParameter("claim").toString();
-	assertions = request.getParameter("assertions").toString();
+	setCount(request);
+	setClaimAssertion(request);
 
 	res.setContentType ("text/html");
 	PrintWriter out = res.getWriter ();
@@ -103,7 +93,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 		out.println("</html>");
 	}
 
-	public void printCounter(PrintWriter out){
+	private void printCounter(PrintWriter out){
 		out.println("<td>");
 		out.println("Disagree: "+disagree);
 		out.println("</td>");
@@ -117,6 +107,32 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 		out.println("</tbody></table>");
 		out.println("</td>");
 		out.println("</tr>");
+	}
+	private void setCount(HttpServletRequest request){
+	try{
+		disagree = Integer.parseInt(request.getParameter("disagree"));
+
+	}catch (Exception e) {
+		disagree = 0;//if error set to zero 
+	}
+
+	try{
+		unsure = Integer.parseInt(request.getParameter("unsure"));
+
+	}catch (Exception e) {
+		unsure = 0;//if error set to zero 
+	}
+
+	try{
+		convinced = Integer.parseInt(request.getParameter("convinced"));
+
+	}catch (Exception e) {
+		convinced = 0;
+	}
+	}
+	private void setClaimAssertion(HttpServletRequest request){
+		claim = request.getParameter("claim")==null ? "" : request.getParameter("claim");
+		assertions = request.getParameter("assertions")==null ? "" : request.getParameter("assertions");
 	}
 
 }
