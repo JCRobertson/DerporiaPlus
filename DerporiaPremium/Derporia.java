@@ -47,7 +47,7 @@ public void doGet  (HttpServletRequest req, HttpServletResponse res) throws Serv
 	out.println("");
 	out.println("	<tbody><tr>");
 	out.println("		<td>");
-	out.println("		<form name=\"assertionForm\"  onsubmit=\"return validateForm()\" action=\"http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.Results\" method=\"post\">");
+	out.println("		<form name=\"assertionForm\"  onsubmit=\"return validateForm()\" action=\"http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Results\" method=\"post\">");
 	out.println("");
 	out.println("			<textarea cols=\"30\" rows=\"1\" name=\"claim\" onclick=\"clearOnClick(this, \'Enter your claim\')\" onblur=\"defaultOnBlur(this, \'Enter your claim')\" autofocus=\"autofocus\">Enter your claim</textarea>");
 	out.println("		<br>");
