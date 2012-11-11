@@ -95,9 +95,6 @@ public void doPost(HttpServletRequest request, HttpServletResponse res) throws S
 			printCounter(out);
 		}
 		out.println("</tbody></table>");
-		out.println("</td>");
-		out.println("</tr>");
-		out.println("</tbody></table>");
 		out.println("<p>");
 		out.println("<a href=\"http://apps-swe432.vse.gmu.edu:8080/swe432/servlet/jdressel.DerporiaPremium.Derporia\">Submit a new claim</a>");
 		out.println("</p>");
