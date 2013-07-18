@@ -1,4 +1,4 @@
 DerporiaPlus
 ============
 
-Servlet Implementation
+Servlet and JavaScript implementation of the Derporia social network.
